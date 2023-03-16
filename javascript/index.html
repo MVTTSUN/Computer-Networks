@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чат</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="./index.js"></script>
+</head>
+<body style="background: #cbcbcb;">
+  <div class="container">
+    <div class="py-5 text-center">
+      <h2>Чат</h2>
+      <p id="name" class="lead text-light"></p>
+    </div>
+    <div class="row r">
+      <div class="col-6">
+        <h3>Форма сообщений</h3>
+        <form id="form-message">
+          <label class="mb-2" for="message">Сообщение</label>
+          <textarea class="form-control bg-light-subtle" name="message" id="input-message" placeholder="Введите сообщение"></textarea>
+          <br>
+          <button id="button-submit" class="btn btn-secondary border border-light">Отправить</button>
+        </form>
+      </div>
+      <div class="col-6">
+        <h3">Сообщения</h3>
+        <div id="all-message"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
