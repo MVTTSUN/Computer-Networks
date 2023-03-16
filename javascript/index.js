@@ -35,5 +35,5 @@ form.addEventListener('submit', (evt) => {
 });
 
 socket.on('chat message', ({ message, name }) => {
-  allMessage.insertAdjacentHTML('afterBegin', `<p class="text-light">${name}: ${message}</p>`);
+  allMessage.insertAdjacentHTML('afterBegin', `<p>${name}: ${message}</p>`);
 })
